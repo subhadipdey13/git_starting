@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage('Welcome'){
+            steps{
+                echo "Welcome to Stage 1"
+            }
+        }
+        stage('GIT Checkout'){
+            steps{
+                git credentialsId: 'Github_Subhadip', url: 'https://github.com/subhadipdey13/git_starting.git'
+            }
+        }
+    }
+}
